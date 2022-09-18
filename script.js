@@ -38,23 +38,44 @@ function toggleAccordion() {
 items.forEach((item) => item.addEventListener("click", toggleAccordion));
 }
 
-/*
+
 //toggle navigation
-var responsiveNav = document.querySelector('#collapsibleNav');
+
+var responsiveNav = document.querySelector('.collapsibleNav');
+const collapseBtn = document.querySelector(".collapseBtn");
+const openBtn = document.querySelector(".openBtn");
+const collapsibleNavs = document.querySelectorAll('.link')
+
+
+const closeNav = (e) => {
+  if(!e.target.closest('.responsiveNav') && e.target != openBtn){
+    responsiveNav.style.display = 'none'
+  }
+}
+
+document.addEventListener('click', closeNav);
+
 function toggleCollapse(){
-    responsiveNav.classList.remove('collapsibleNav');
+  responsiveNav.style.display = 'none'
 }
 
 function toggleOpen () {
-    responsiveNav.classList.add('responsiveNav') ;
+ responsiveNav.style.display = 'flex'
 }
 
-const collapseBtn = document.querySelector(".collapseBtn");
-const openBtn = document.querySelector(".header > i");
-collapseBtn.onclick  = toggleCollapse();
-openBtn.onclick  = toggleOpen();
+function activeNav () {
+  collapsibleNavs.forEach(item => {
+    item.addEventListener('click', e => {
+      collapsibleNavs.forEach(items => items.classList.remove('active') )
+      item.classList.add('active')
+    })
+  })
+}
 
-*/
+activeNav()
+
+
+
 
 //to top function
 {
@@ -122,3 +143,16 @@ assets.forEach(item => {
   imageObj.src ="./canvas/" + item + ".png";
 })
 
+
+//active nav
+const li = document.querySelectorAll(".toplink");
+const sec = document.querySelectorAll(".section");
+
+function activeMenu() {
+    let len = sec.length;
+    while (--len && window.scrollY + 100 < sec[len].offsetTop) {}
+    li.forEach(ltx => ltx.classList.remove("active"));
+    li[len].classList.add("active");
+}
+activeMenu();
+window.addEventListener("scroll", activeMenu);

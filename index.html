@@ -27,35 +27,39 @@
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <div class="container">
         <header class="header">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars openBtn" onclick="toggleOpen()"></i>
             <img src="./assets//logo.png" alt="" class="logo">
             <div class="icon" >Kibet K.</div>
             <nav class="topNav">
-                <a href="#" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#" class="toplink active">Home</a>
+                <a href="#about" class="toplink"> About</a>
+                <a href="#skills" class="toplink">Skills</a>
+                <a href="#services" class="toplink">Services</a>
+                <a href="#projects" class="toplink">Projects</a>
+                <a href="#contact" class="toplink">Contact</a>
             </nav>
         </header>
         <!--collapsibe nav-->
-        <!--
-          <div class="collapsibleNav responsiveNav" id="collapsibleNav">
-                <div class="collapseBtn">
+
+          <div class="responsiveNav collapsibleNav " id="collapsibleNav">
+                <div class="collapseBtn" onclick="toggleCollapse()">
                     <i class="fa fa-close" style="color: white;"></i>
                 </div>
-                <a href="#" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <div class="wrapper">
+                    <a href="#" class="link active">Home</a>
+                    <a href="#about" class="link">About</a>
+                    <a href="#skills" class="link">Skills</a>
+                    <a href="#services" class="link">Services</a>
+                    <a href="#projects" class="link">Projects</a>
+                    <a href="#contact" class="link">Contact</a>
+                </div>
+
             </div>
-        -->
+
+
         <main class="main">
             
-            <div id="home">
+            <div class="section" id="home">
                 <div class="section">
                     <h1>Hi, <br>
                         I am Kibet <br>
@@ -68,7 +72,7 @@
             
 
 
-            <div class="about" id="about">
+            <div class="about section" id="about">
                 <h1>About Me</h1>
                 <div>
                     <img src="./assets/IMG_20210917_134919_446.jpg" alt="Kkibet">
@@ -81,7 +85,7 @@
                 </div>
                 
             </div>
-            <div id="skills" class="skills">
+            <div id="skills section" class="skills">
                 <h1 >SKILLS</h1>
                 
                 <div class="wrapper">
@@ -244,7 +248,7 @@
 
             </div>
 
-            <div id="services" class="services">
+            <div id="services" class="services section">
                 <h1>SERVICES</h1>
                 
                 <div >
@@ -356,12 +360,12 @@
 
 
             <!--projects-->
-            <div id="projects" class="projects">
+            <div id="projects" class="projects section">
                 <h1>PROJECTS</h1>
                 <div class="wrapper">
                     <div class="item">
                         <h1>Gaming website landing page</h1>
-                        <img src="./assets/Coongames.png" alt="chat app" />
+                        <img src="./assets/Coongames.png" alt="Gaming website" />
                         <a href="https://coongames.netlify.app/" target="_blank">Visit Coongames</a>
                     </div>
 
@@ -373,19 +377,19 @@
 
                     <div class="item">
                         <h1>European football site</h1>
-                        <img src="./assets//React-Football.png" alt="chat app" />
+                        <img src="./assets//React-Football.png" alt="football" />
                         <a href="https://github.com/K-kibet/react-football" target="_blank">Github Repo</a>
                     </div>
 
                     <div class="item">
                         <h1>NFT landing page</h1>
-                        <img src="./assets/Screenshot 2022-09-18 8.12.03 PM.png" alt="chat app" />
+                        <img src="./assets/Screenshot 2022-09-18 8.12.03 PM.png" alt="NFT landing page" />
                         <a href="https://github.com/K-kibet/crypto-nft_landing_page" target="_blank">Github Repo</a>
                     </div>
 
                     <div class="item">
                         <h1>Flexbox project</h1>
-                        <img src="./assets/Screenshot 2022-09-18 8.17.07 PM.png" alt="chat app" />
+                        <img src="./assets/Screenshot 2022-09-18 8.17.07 PM.png" alt="Flexbox project" />
                         <a href="https://github.com/K-kibet/grid-layout-contest" target="_blank">Github Repo</a>
                     </div>
                 </div>
@@ -394,13 +398,14 @@
 
             <!--contact-->
             
-            <div id="contact" class="contact">
+            <div id="contact" class="contact section">
                 <h1 >CONTACT</h1>
                 
                 <div class="wrapper">
                     <form class="contactForm" action="https://formsubmit.co/coongames8@gmail.com" method="POST">
                         <input type="hidden" name="_next" value="http://127.0.0.1:5501/thankyou.html">
                         <input type="hidden" name="_subject" value="New email">
+                        <input type="text" name="_honey" style="display:none">
                         <input type="hidden" name="_template" value="table">
                         <input type="text" name="email" id="" required placeholder="example@gmail.com">
                         <input type="text" name="username" id="" required placeholder="Name*">
