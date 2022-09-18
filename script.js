@@ -1,3 +1,4 @@
+
 //toggle navigation
 {
     const topNav = document.querySelector('.topNav');
@@ -37,6 +38,7 @@ function toggleAccordion() {
 items.forEach((item) => item.addEventListener("click", toggleAccordion));
 }
 
+/*
 //toggle navigation
 var responsiveNav = document.querySelector('#collapsibleNav');
 function toggleCollapse(){
@@ -52,7 +54,7 @@ const openBtn = document.querySelector(".header > i");
 collapseBtn.onclick  = toggleCollapse();
 openBtn.onclick  = toggleOpen();
 
-
+*/
 
 //to top function
 {
@@ -73,3 +75,50 @@ openBtn.onclick  = toggleOpen();
 
     toTopBtn.addEventListener('click', toTop)
 }
+
+//auto-type
+
+var typed = new Typed(".type", {
+    strings : ["Software Developer.", "Web programmer.", "Full stack developer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true 
+})
+
+//canvas
+
+var width = window.innerWidth;
+var height = window.innerHeight;
+
+var stage = new Konva.Stage({
+  container: 'canvas',
+  width: width,
+  height: height,
+});
+
+var layer = new Konva.Layer();
+stage.add(layer);
+
+const assets = ['sass','mui','pwa',"npm","nodejs","git", "preact", "terminal",'html', 'firebase', 
+'chrome', 'babel', 'aws', 'ansible', 'android', '702308', 'chrome-extension', 'docker', 
+'graphql', 'kubernetes', 'typescript', 'react', "python", 'framer', 'ionic', 'express',
+'next', 'mysql', 'spring', 'node1', 'bash', 'redux', 'kotlin', 'linux', 'c', 'xml', 'java']
+
+
+assets.forEach(item => { 
+  var imageObj = new Image();
+  imageObj.onload = function () {
+    var yoda = new Konva.Image({
+      x: Math.random() * 1250,
+      y: Math.random() * 500,
+      image: imageObj,
+      width: 50,
+      height: 50,
+    });
+
+    // add the shape to the layer
+    layer.add(yoda);
+  };
+  imageObj.src ="./canvas/" + item + ".png";
+})
+

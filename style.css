@@ -36,6 +36,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
 }
 
 a{
@@ -53,7 +54,7 @@ h1{
   color: rgb(65, 65, 65);
   text-align: center;
   font-size: 22px;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 .header{
@@ -86,6 +87,13 @@ h1{
 .header i:hover{
   background-color: rgb(143, 143, 143);
 }
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: fill;
+  object-position: center;
+}
 .icon{
     padding: 5px;
     font-family: cursive;
@@ -102,9 +110,9 @@ h1{
 }
 
 .topNav a{
-    width: 120px;
+
     height: inherit;
-    margin: 0px 5px;
+    margin: 0px 30px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -132,6 +140,7 @@ h1{
   top: 70px;
   right: 0;
   z-index: 999;
+  display: none;
 }
 
 .collapsibleNav a{
@@ -175,139 +184,189 @@ h1{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 70px;
 }
 /*home*/
 #home {
   width: 100vw;
-  min-height: 80vh;
+  min-height: 95vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: white;
-  margin-top: 20px;
+  position: relative;
 }
 
 #home .section{
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: auto;
+  opacity: 0.6;
+  z-index: 10;
 }
 
-#home .section:last-of-type{
-  background: url('./assets/blob.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+#home #canvas{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--circle-bg);
+}
+
+#home #canvas * {
+  opacity: 0.3;
 }
 
 #home .section h1{
-  padding-left: 40px;
   font-size: 34px;
   font-weight: 600;
   color:#00AE58;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-#home .section a{
+
+/*about section*/
+.about{
+    width: 100vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+
+.about > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.about #desc{
+  max-width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3em;
+  align-items: center;
+  font-size: 18px;
+}
+
+.about img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: fill;
+  object-position: center;
+}
+
+
+.about a{
   font-size: 20px;
   color: white;
   cursor: pointer;
   text-decoration: none;
   padding: 10px;
-  border: 1px solid #00B140;
-  color: #00B140;
-}
-
-#home .section img{
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-}
-
-/*about section*/
-.about{
-    width: 100vw;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.about #desc{
-  width: 80%;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
+  border: 1px solid #00AE58;
+  color: #00AE58;
 }
 
 
 /*skills section*/
 .skills{
   width: 100vw;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: white;
-  margin-top: 20px;
-  position: relative;
-}
-
-
-.skills  > div {
-  width: 350px;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-
+  justify-content: space-evenly;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+  background: transparent;
 }
 
-.skillItem{
+
+
+
+.skills .wrapper{
   width: 100%;
-  height: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  
+}
+
+.skills .skillItem{
+  width: 300px;
+  height: 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(124, 122, 122);
+  margin-bottom: 30px;
+  padding-left: 5px;
+}
+
+.skills .wrapper .bar{
+  width: 70%;
+  height: inherit;
+  border-radius: inherit;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 5px 5px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #bababa;
+  background-color: rgb(212, 211, 211);
 }
 
-.skillName{
-  margin-right: 5px;
-  font-size: 18px;
-  fill: rgb(255, 145, 0);
+.bar .skillName {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.skillRate{
-  width: 60%;
-  height: 22px;
-  background-color: grey;
+
+.bar .background {
+  width: 0;
+  height: inherit;
+  border-radius: inherit;
+  border: 1px solid green;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #17c434;
-  border-radius: 2px;
 }
+
+
 
 
 /*services*/
 .services{
   width: 100vw;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   overflow-x: hidden;
+  position: relative;
+  z-index: 10;
+}
 
+ .service .background{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  opacity: 0.1;
 }
 
 .services > div{
@@ -333,15 +392,15 @@ h1{
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  border:1px solid #00B140;
+  justify-content: space-evenly;
   border-radius: 5px;
   background-color: white;
   margin: 10px 0px;
+  border: 1px solid green;
 }
 
 .serviceItem img{
-  width: 60%;
+  max-width: 40%;
   object-fit: fill;
   object-position: center;
   margin-bottom: 20px;
@@ -355,7 +414,6 @@ h1{
 }
 /*faq*/
 .faq {
-
    display: block;
     margin: 0 auto;
     max-width: 48rem;
@@ -450,6 +508,7 @@ h1{
   }
 
 
+  /*projects*/
   .projects{
     width: 100%;
     min-height: 70vh;
@@ -457,6 +516,18 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 10px 0px;
+  }
+
+  .projects .wrapper {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
   }
 
   .projects p{
@@ -464,18 +535,69 @@ h1{
     font-weight: 400;
   }
 
+  .projects .wrapper .item{
+    width: 300px;
+    height: 290px;
+    margin: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #00AE58;
+    border-radius: 10px;
+
+  }
+
+  .projects .wrapper .item h1{
+    margin: 20px;
+    font-size: 18px;
+    color: #111;
+    margin: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .projects .item img {
+    width: 70%;
+    object-fit: fill;
+    object-position: center;
+  }
+
+  .projects .item a{
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1cbcd8;
+    background-color: #111;
+    border-radius: 5px;
+  }
+
+
+
   
   /*contact section*/
 
   .contact{
     width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px 20px;
     position: relative;
-    margin-top: 40px;
+    margin: 30px 0px;
+    padding: 10px;
 
+  }
+
+  .contact .wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .contactForm{
@@ -551,7 +673,7 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin: 20px 0px;
 }
 
 .hire img{
@@ -671,13 +793,12 @@ h1{
 
 /*footer */
 .footer{
-  margin-top: 30px;
+    padding: 10px;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .footer div {
@@ -721,52 +842,144 @@ h1{
 
 .html{
   background-color: rgb(240, 147, 26);
+  animation: html-fill 2s forwards;
 }
 
 .css{
   background-color: dodgerblue;
+  animation: html-fill 2s forwards;
 }
 
 .javascript{
   background-color: #d3d31fe7;
+  animation: html-fill 2s forwards;
 }
 
-.php{
-  background-color: #3e79c0;
+.c{
+  background-color: #3a7fff;
+  animation: html-fill 2s forwards;
 }
 
 .react{
-    background-color: #3a9fff;
-}
-
-.nodejs{
-  background-color: #17c434;
+  background-color: #3a9fff;
+  animation: html-fill 2s forwards;
 }
 
 .bootstrap{
   background-color: rgb(62, 62, 236);
+  animation: html-fill 2s forwards;
 }
 
-
-.graphql{
-  background-color: fuchsia;
+.sass{
+  background-color: rgb(232, 142, 255);
+  animation: html-fill 2s forwards;
 }
 
 .git{
   background-color: rgb(231, 112, 26);
+  animation: html-fill 2s forwards;
+}
+
+.kotlin{
+  background-color: #bb35f0;
+  animation: html-fill 2s forwards;
 }
 
 .linux{
   background-color: ghostwhite;
+  animation: html-fill 2s forwards;
   color: black;
 }
 
-.ui-ux-design{
-  background-color: rgb(43, 43, 43);
-  color: white;
+.java{
+  background-color: rgb(228, 100, 9);
+  animation: html-fill 2s forwards;
 }
 
+.jquery{
+  background-color: #1946c4;
+  animation: html-fill 2s forwards;
+}
 
+.native{
+  background-color: #3a9fff;
+  animation: html-fill 2s forwards;
+}
+
+.redux{
+  background-color: rgb(121, 10, 121);
+  animation: html-fill 2s forwards;
+}
+
+.python{
+  background-color: #2678c5;
+  animation: python-fill 2s forwards;
+}
+
+.ui-ux-design{
+  animation: html-fill 2s forwards;
+}
+
+.native{
+  background-color: #3a9fff;
+  animation: html-fill 2s forwards;
+}
+
+.nodejs{
+  background-color: #0f9425;
+  animation: node-fill 2s forwards;
+}
+
+.go{
+  background-color: #2890f1;
+  animation: go-fill 2s forwards;
+}
+
+.php{
+  background-color: #b38dfa;
+  animation: php-fill 2s forwards;
+}
+
+.graphql{
+  background-color: rgb(235, 80, 235);
+  animation: graph-fill 2s forwards;
+}
+
+@keyframes html-fill {
+  100% {
+      width: 100%;
+  }
+}
+
+@keyframes node-fill {
+  100% {
+      width: 90%;
+  }
+}
+
+@keyframes go-fill {
+  100% {
+      width: 40%;
+  }
+}
+
+@keyframes php-fill {
+  100% {
+      width: 50%;
+  }
+}
+
+@keyframes graph-fill {
+  100% {
+      width: 30%;
+  }
+}
+
+@keyframes python-fill {
+  100% {
+      width: 80%;
+  }
+}
 
 
 /*media queries*/
@@ -783,7 +996,7 @@ h1{
     flex-direction: column;
   }
 
-  .contact .contactForm{
+  .contact .wrapper .contactForm{
     width: 60%;
   }
 
@@ -805,7 +1018,7 @@ h1{
 
 
 @media screen and (max-width: 640px){
-.contact .contactForm{
+.contact .wrapper .contactForm{
     width: 80%;
   }
 
@@ -828,11 +1041,11 @@ h1{
 }
 
 @media screen and (max-width: 475px){
-  .contact .contactForm{
+  .contact .wrapper .contactForm{
     width: 90%;
   }
 
-  .contact .contactAddress{
+  .contact .wrapper .contactAddress{
     width: 90%;
   }
 

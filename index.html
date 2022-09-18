@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <title>Kibet Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome.min.css">
+    <script src="https://unpkg.com/konva@8.3.12/konva.min.js"></script>
 </head>
 <body>
 <!--Roboto font-->
@@ -26,6 +28,7 @@
     <div class="container">
         <header class="header">
             <i class="fa fa-bars"></i>
+            <img src="./assets//logo.png" alt="" class="logo">
             <div class="icon" >Kibet K.</div>
             <nav class="topNav">
                 <a href="#" class="active">Home</a>
@@ -37,6 +40,7 @@
             </nav>
         </header>
         <!--collapsibe nav-->
+        <!--
           <div class="collapsibleNav responsiveNav" id="collapsibleNav">
                 <div class="collapseBtn">
                     <i class="fa fa-close" style="color: white;"></i>
@@ -48,150 +52,240 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
+        -->
         <main class="main">
+            
             <div id="home">
                 <div class="section">
                     <h1>Hi, <br>
                         I am Kibet <br>
-                        Full stack developer
+                        <span class="type"></span>
                     </h1>
-                    <a href="#contact">CONTACT</a>
                 </div>
-                <div class="section">
-                    <img src="./assets/IMG_20210917_134919_446.jpg" alt="Kkibet">
-                </div>
+                <div id="canvas"></div>
             </div>
+
+            
+
+
             <div class="about" id="about">
                 <h1>About Me</h1>
-                <section id="desc">
-                    Kibet Korir Charles is a fullstack developer who is goal oriented and responsible for implementing front-end and back-end development.
-                    I geared toward quality and productivity while being time consciouss. I outstanding communication skills both spoken and written.
-                </section>
+                <div>
+                    <img src="./assets/IMG_20210917_134919_446.jpg" alt="Kkibet">
+                    <section id="desc">
+                        Kibet Korir Charles is a fullstack developer who is goal oriented and responsible for implementing front-end and back-end development.
+                        I geared toward quality and productivity while being time consciouss. I outstanding communication skills both spoken and written.
+                        <a href="./assets/Annotate Image6.pdf" target="_blank">RESUME</a>
+                    </section>
+                    
+                </div>
+                
             </div>
             <div id="skills" class="skills">
-                <h1 style="position: absolute; top: -40px; z-index: 200;">SKILLS</h1>
-                <div>
+                <h1 >SKILLS</h1>
+                
+                <div class="wrapper">
+
                     <div class="skillItem">
                         <div class="skillName">HTML5</div>
-                        <div class="skillRate html">
-                            100%
+                        <div class="bar">
+                            <div class="background html">100%</div>
                         </div>
                     </div>
+
     
                     <div class="skillItem">
                         <div class="skillName">CSS3</div>
-                        <div class="skillRate css" >
-                            100%
+                        <div class="bar">
+                            <div class="background css">100%</div>
                         </div>
+                        
                     </div>
     
                     <div class="skillItem">
                         <div class="skillName">JavaScript</div>
-                        <div class="skillRate javascript">
-                            100%
+                        <div class="bar">
+                            <div class="background javascript">100%</div>
+                        </div>
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName">C</div>
+                        <div class="bar">
+                            <div class="background c">100%</div>
                         </div>
                     </div>
     
-                    <div class="skillItem">
-                        <div class="skillName">PHP 7</div>
-                        <div class="skillRate php">
-                            60%
-                        </div>
-                    </div>
     
                     <div class="skillItem">
                         <div class="skillName">React.js</div>
-                        <div class="skillRate react">
-                            90%
+                        <div class="bar">
+                            <div class="background react">100%</div>
                         </div>
                     </div>
-    
-                    <div class="skillItem">
-                        <div class="skillName ">Node.js</div>
-                        <div class="skillRate nodejs">
-                            70%
-                        </div>
-                    </div>
-                </div>
 
-                <div>
                     <div class="skillItem">
                         <div class="skillName">Bootsrap</div>
-                        <div class="skillRate bootstrap">
-                            90%
+                        <div class="bar">
+                            <div class="background bootstrap">100%</div>
                         </div>
                     </div>
-    
+
                     <div class="skillItem">
-                        <div class="skillName">GraphQl</div>
-                        <div class="skillRate graphql">
-                            70%
+                        <div class="skillName">Sass</div>
+                        <div class="bar ">
+                            <div class="background sass">100%</div>
                         </div>
+                        
                     </div>
-    
+
                     <div class="skillItem">
                         <div class="skillName">Git</div>
-                        <div class="skillRate git">
-                            100%
+                        <div class="bar">
+                            <div class="background git">100%</div>
                         </div>
-                    </div>
-    
-                    <div class="skillItem">
-                        <div class="skillName">Linux</div>
-                        <div class="skillRate linux">
-                            90%
-                        </div>
+                        
                     </div>
 
     
                     <div class="skillItem">
-                        <div class="skillName">UI/UX</div>
-                        <div class="skillRate ui-ux-design">
-                            90%
+                        <div class="skillName">Kotlin</div>
+                        <div class="bar ">
+                            <div class="background kotlin">100%</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName">Linux</div>
+                        <div class="bar ">
+                            <div class="background linux">100%</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName">Java</div>
+                        <div class="bar ">
+                            <div class="background java">100%</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName">jQuery</div>
+                        <div class="bar ">
+                            <div class="background jquery">100%</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName ">Native</div>
+                        <div class="bar">
+                            <div class="background native">100%</div>
                         </div>
                     </div>
+
+                    <div class="skillItem">
+                        <div class="skillName ">Redux</div>
+                        <div class="bar">
+                            <div class="background redux">100%</div>
+                        </div>
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName">UI/UX</div>
+                        <div class="bar ">
+                            <div class="background ui-ux-design">100%</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName ">Node.js</div>
+                        <div class="bar">
+                            <div class="background nodejs">90%</div>
+                        </div>
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName ">Python</div>
+                        <div class="bar">
+                            <div class="background python">70%</div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="skillItem">
+                        <div class="skillName">PHP 7</div>
+                        <div class="bar">
+                            <div class="background php">50%</div>
+                        </div>
+                    </div>
+
+                    <div class="skillItem">
+                        <div class="skillName ">Go</div>
+                        <div class="bar">
+                            <div class="background go">40%</div>
+                        </div>
+                    </div>
+
+                        
+                    <div class="skillItem">
+                        <div class="skillName">GraphQl</div>
+                        <div class="bar">
+                            <div class="background graphql">30%</div>
+                        </div>
+                        
+                    </div>
                 </div>
+
             </div>
 
             <div id="services" class="services">
                 <h1>SERVICES</h1>
+                
                 <div >
                     <div class="serviceItem">
-                        <img src="./assets/Web-Developer-Bootcamp-San-Francisco.jpeg" alt="" class="serviceImg">
+                        
+                        <img src="./assets/webdev.png" alt="" class="serviceImg">
                         <div class="serviceDesc">
-                            Website design and development with html, css and javascript.
+                            Responsive web design and development with html, css and javascript.
                         </div>
                     </div>
                     <div class="serviceItem">
-                        <img src="./assets/1_FS8t7OLp0f-LdAX3uvDMvw.png" alt="" class="serviceImg">
+                        <img src="./assets/bot.png" alt="" class="serviceImg">
                         <div class="serviceDesc">
-                            Autoresponder chatbot design and implementation.
+                            Autoresponder chatbot design and implementation for mobile and web applications.
                         </div>
                     </div>
                     
                 </div>
                 <div>
                     <div class="serviceItem">
-                        <img src="./assets/download (1).png" alt="" class="serviceImg">
+                        <img src="./canvas/android.png" alt="" class="serviceImg">
                         <div class="serviceDesc">
-                            I develop websites in react and integrate with firebase database.
+                            Android application development with with java and kotlin which adapts to any screen
                         </div>
                     </div>
 
                     <div class="serviceItem">
-                        <img src="./assets/email-design-basics.png" alt="" class="serviceImg">
+                        <img src="./assets/api.png" alt="" class="serviceImg">
                         <div class="serviceDesc">
-                            HTML5 email template development
+                            RESTful services. Serverless API development with node.js and express.js.
                         </div>
                     </div>
                 </div>
+                <img src="./assets/bg.jpeg" class="background" />
             </div>
 
             </div>
 
             <!--hire-->
             <div class="hire">
-                <img src="./assets/images (4).png" alt="">
+                <img src="./assets/desk.png" alt="">
                 <div class="hire-span">
                     <p>If you are looking for a suitable candidate to hire for front-end development then this is the right place for you. <br /></p>
                     <button class="hireBtn">Hire Me</button>
@@ -257,38 +351,74 @@
                   </div>
                 </div>
               </div>
+              
             </div>
 
 
             <!--projects-->
             <div id="projects" class="projects">
                 <h1>PROJECTS</h1>
-                <p>COMMING SOON!</p> 
+                <div class="wrapper">
+                    <div class="item">
+                        <h1>Gaming website landing page</h1>
+                        <img src="./assets/Coongames.png" alt="chat app" />
+                        <a href="https://coongames.netlify.app/" target="_blank">Visit Coongames</a>
+                    </div>
+
+                    <div class="item">
+                        <h1>React + Firebase Chat Application</h1>
+                        <img src="./assets/BIGCHAT (4).png" alt="chat app" />
+                        <a href="https://github.com/K-kibet/bigchat" target="_blank">Github Repo</a>
+                    </div>
+
+                    <div class="item">
+                        <h1>European football site</h1>
+                        <img src="./assets//React-Football.png" alt="chat app" />
+                        <a href="https://github.com/K-kibet/react-football" target="_blank">Github Repo</a>
+                    </div>
+
+                    <div class="item">
+                        <h1>NFT landing page</h1>
+                        <img src="./assets/Screenshot 2022-09-18 8.12.03 PM.png" alt="chat app" />
+                        <a href="https://github.com/K-kibet/crypto-nft_landing_page" target="_blank">Github Repo</a>
+                    </div>
+
+                    <div class="item">
+                        <h1>Flexbox project</h1>
+                        <img src="./assets/Screenshot 2022-09-18 8.17.07 PM.png" alt="chat app" />
+                        <a href="https://github.com/K-kibet/grid-layout-contest" target="_blank">Github Repo</a>
+                    </div>
+                </div>
             </div>
 
 
             <!--contact-->
+            
             <div id="contact" class="contact">
-                <h1 style="position: absolute; top: -40px; z-index: 200;">CONTACT</h1>
-                <form class="contactForm" action="https://formsubmit.co/coongames8@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5501/thankyou.html">
-                    <input type="hidden" name="_subject" value="New email">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="text" name="email" id="" required placeholder="example@gmail.com">
-                    <input type="text" name="username" id="" required placeholder="Name*">
-                    <input type="hidden" name="_cc" value="charleykibet254@gmail.com">
-                    <input type="text" name="text" class="message" spellcheck="true"></input>
-                    <button type="submit">SUBMIT</button>
-                </form>
-
-                <div class="contactAddress">
-                    <p> Kkibet</p>
-                    <p>431 University way, Floor 2</p>
-                    <p>Nairobi NY 10013</p>
-                    <p>Kenya</p>
-                    <p>tel: <a href="tel:+254 797814027">+254 797814027</a></p>
-                    <p>mail: <a href="mailto:coongames8@gmail.com" target="_blank">coongames8@gmail.com</a></p>
+                <h1 >CONTACT</h1>
+                
+                <div class="wrapper">
+                    <form class="contactForm" action="https://formsubmit.co/coongames8@gmail.com" method="POST">
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5501/thankyou.html">
+                        <input type="hidden" name="_subject" value="New email">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="email" id="" required placeholder="example@gmail.com">
+                        <input type="text" name="username" id="" required placeholder="Name*">
+                        <input type="hidden" name="_cc" value="charleykibet254@gmail.com">
+                        <input type="text" name="text" class="message" spellcheck="true"></input>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+    
+                    <div class="contactAddress">
+                        <p> Kkibet</p>
+                        <p>431 University way, Floor 2</p>
+                        <p>Nairobi NY 10013</p>
+                        <p>Kenya</p>
+                        <p>tel: <a href="tel:+254 797814027">+254 797814027</a></p>
+                        <p>mail: <a href="mailto:coongames8@gmail.com" target="_blank">coongames8@gmail.com</a></p>
+                    </div>
                 </div>
+
             </div>
 
 
@@ -332,7 +462,12 @@
                 <a href="#faq">FAQ</a>
             </div>
         </footer>
+        <div id="container"></div>
     </div>
+
+    <!--Auto type effect-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
