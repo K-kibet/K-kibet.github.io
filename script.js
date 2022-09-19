@@ -100,7 +100,8 @@ activeNav()
 //auto-type
 
 var typed = new Typed(".type", {
-    strings : ["Software Developer.", "Web programmer.", "Full stack developer"],
+
+    strings : ["Software Developer.", "Web programmer.", "Full Stack Engineer", "Android Developer"],
     typeSpeed: 100,
     backSpeed: 100,
     loop: true 
