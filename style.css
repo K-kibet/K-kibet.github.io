@@ -6,7 +6,7 @@
     --switch-height:30px;
     --circle-size : 22px;
     --circle-padding: 3px;
-    --circle-bg:#111;
+    --circle-bg:#121;
     --circle-on-bg: #fff;
     --switch--bg: #c9c9c9;
     --switch-on-bg: #4c86d8;
@@ -214,7 +214,7 @@ h1{
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #9CAF88;
+  background-color: var(--circle-bg);
 }
 
 #home #canvas * {
