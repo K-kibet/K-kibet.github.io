@@ -103,7 +103,7 @@ var typed = new Typed(".type", {
 
     strings : ["Software Development.", "Web development.", "Full Stack Engineering", "Android App Development", "UI/UX implementation"],
     typeSpeed: 100,
-    backSpeed: 100,
+    backSpeed: 300,
     loop: true 
 })
 
