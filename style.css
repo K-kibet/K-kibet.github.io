@@ -244,11 +244,12 @@ h1{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about #desc{
-  max-width: 60%;
+  width: 98%;
   padding: 10px;
   display: flex;
   flex-direction: column;
