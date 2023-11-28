@@ -101,9 +101,9 @@ activeNav()
 
 var typed = new Typed(".type", {
 
-    strings : ["Software Development.", "Web development.", "Full Stack Engineering", "Android App Development", "UI/UX implementation"],
+    strings : ["Software Development.", "Web programming.", "Full Stack Engineering", "Android Apps", "UI/UX implementation", "SEO expert"],
     typeSpeed: 100,
-    backSpeed: 300,
+    backSpeed: 100,
     loop: true 
 })
 
