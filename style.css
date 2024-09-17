@@ -61,7 +61,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
+    padding: 0px 10px;
     position: fixed;
     z-index: 999;
     background-color: white;
@@ -250,13 +250,13 @@ h1{
 }
 
 .about #desc{
-  width: 98%;
-  padding: 5px;
+  width: 100%;
+  padding: 5px 5px;
   display: flex;
   flex-direction: column;
-  line-height: 1.2em;
+  line-height: 1.5rem;
   align-items: center;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .about img {
@@ -291,7 +291,7 @@ h1{
   border-radius: 10px;
   color: white;
   margin-top: 10px;
-  padding: 10px;
+  padding: 5px;
   position: relative;
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
   background: transparent;
@@ -319,7 +319,7 @@ h1{
   align-items: center;
   justify-content: space-between;
   background-color: rgb(124, 122, 122);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 5px;
 }
 
@@ -354,7 +354,7 @@ h1{
 
 /*services*/
 .services{
-  width: 100vw;
+  width: 100%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -388,11 +388,13 @@ h1{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 
 }
 
 .serviceItem{
-  width: 300px;
+  width: calc((100% - 30px) / 3)
+  min-width: 300px;
   height: 230px;
   display: flex;
   align-items: center;
@@ -400,7 +402,6 @@ h1{
   justify-content: space-evenly;
   border-radius: 5px;
   background-color: white;
-  margin: 10px 0px;
   border: 1px solid green;
 }
 
@@ -408,14 +409,14 @@ h1{
   max-width: 40%;
   object-fit: fill;
   object-position: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .serviceItem .serviceDesc{
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 /*faq*/
 .faq {
