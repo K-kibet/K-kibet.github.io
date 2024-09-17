@@ -57,7 +57,7 @@ h1{
 }
 
 .header{
-    width: 100%;
+    width: 100vw;
     height: 70px;
     display: flex;
     align-items: center;
@@ -87,7 +87,7 @@ h1{
   background-color: rgb(143, 143, 143);
 }
 
-.logo {
+img.logo{
   width: 60px;
   height: 60px;
   object-fit: fill;
@@ -182,12 +182,11 @@ h1{
 /*main*/
 .main{
   width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 65px;
 }
 /*home*/
 #home {
