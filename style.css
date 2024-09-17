@@ -254,7 +254,8 @@ img.logo{
   padding: 5px 10px;
   display: flex;
   flex-direction: column;
-  line-height: 1.5rem;
+  line-height: 2rem
+  letter-spacing: 1.5px;
   align-items: center;
   font-size: 20px;
 }
@@ -264,7 +265,7 @@ img.logo{
   color: white;
   cursor: pointer;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #00AE58;
   color: #00AE58;
 }
@@ -339,18 +340,12 @@ img.logo{
   justify-content: center;
 }
 
-
-
-
 /*services*/
 .services{
   width: 100%;
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  overflow-x: hidden;
   position: relative;
   z-index: 10;
 }
@@ -366,11 +361,9 @@ img.logo{
 
 .services > div{
   width: 100%;
-  margin: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0px 100px;
 }
 
 .services > div > div{
@@ -380,7 +373,6 @@ img.logo{
   align-items: center;
   justify-content: center;
   gap: 10px;
-
 }
 
 .serviceItem{
@@ -389,24 +381,24 @@ img.logo{
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-bewtween;
+  gap: 5px;
   border-radius: 5px;
   background-color: white;
   border: 1px solid green;
+  padding: 5px;
 }
 
 .serviceItem img{
   max-width: 40%;
   object-fit: fill;
   object-position: center;
-  margin-bottom: 10px;
 }
 
 .serviceItem .serviceDesc{
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 0px 10px;
 }
 /*faq*/
 .faq {
@@ -521,18 +513,17 @@ img.logo{
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 10px;
-    padding: 10px;
     gap: 10px;
   }
 
   .projects p{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 400;
   }
 
   .projects .wrapper .item{
-    width: calc((100% - 30px) / 3);
+    width: calc((100% - 100px) / 3);
+    min-width: 280px;
     height: 280px;
     margin: 20px;
     display: flex;
@@ -570,12 +561,8 @@ img.logo{
     background-color: #111;
     border-radius: 5px;
   }
-
-
-
   
   /*contact section*/
-
   .contact{
     width: 100vw;
     display: flex;
@@ -624,7 +611,7 @@ img.logo{
   }
 
 .contactForm button{
-    width: 140px;
+    width: 160px;
     height: 34px;
     color: #118625;
     border-radius: 5px;
@@ -672,7 +659,6 @@ img.logo{
 }
 
 .hireBtn{
-
   width: 130px;
   height: 36px;
   margin: 0px 20px;
@@ -683,7 +669,6 @@ img.logo{
   font-size: 20px;
   font-weight: 600;
   background-color: dodgerblue;
-
 }
 
 
@@ -693,7 +678,6 @@ img.logo{
 }
 
 @keyframes shake {
-  
   0% {
     transform: translate(1px, 1px) rotate(0deg);
   }
@@ -737,8 +721,6 @@ img.logo{
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
-
-  
 }
 
 /* to top */
@@ -746,7 +728,7 @@ img.logo{
   width: 50px;
   height: 40px;
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;
   right: 5px;
   z-index: 99;
   outline: none;
@@ -938,11 +920,6 @@ img.logo{
 
 
 @media screen and (max-width: 640px){
-  .services > div{
-    flex-direction: column;
-    width: 100%;
-  }
-
   .hire {
     flex-direction: column;
   }
