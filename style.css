@@ -412,7 +412,7 @@ img.logo{
 .faq {
    display: block;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 95%;
     padding: 0px 10px;
   }
   
@@ -584,9 +584,8 @@ img.logo{
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 30px 0px;
-    padding: 10px;
-
+    margin: 10px 0px;
+    padding: 5px;
   }
 
   .contactForm{
@@ -595,9 +594,8 @@ img.logo{
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 650px;
+    max-width: 750px;
     min-height: 250px;
-    margin-top: 10px;
   }
   
 
@@ -771,12 +769,14 @@ img.logo{
 }
 
 .footer div {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
 .footer .follow {
+  width: 100%;
   max-width: 350px;
   flex-direction: column;
 }
@@ -873,7 +873,7 @@ img.logo{
 
 .nodejs{
   background-color: #0f9425;
-  animation: node-fill 2s forwards;
+  animation: html-fill 2s forwards;
 }
 
 .php{
@@ -889,12 +889,6 @@ img.logo{
 @keyframes html-fill {
   100% {
       width: 100%;
-  }
-}
-
-@keyframes node-fill {
-  100% {
-      width: 90%;
   }
 }
 
