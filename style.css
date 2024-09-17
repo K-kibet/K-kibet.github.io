@@ -297,12 +297,11 @@ img.logo{
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 20px;
-  
+  padding: 10px;
 }
 
 .skills .skillItem{
-  width: 280px;
+  width: 290px;
   height: 24px;
   border-radius: 10px;
   display: flex;
@@ -315,7 +314,7 @@ img.logo{
 }
 
 .skills .wrapper .bar{
-  width: 70%;
+  width: 60%;
   height: inherit;
   border-radius: inherit;
   display: flex;
@@ -375,6 +374,7 @@ img.logo{
 }
 
 .services > div > div{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,8 +384,7 @@ img.logo{
 }
 
 .serviceItem{
-  width: calc((100% - 30px) / 3)
-  min-width: 300px;
+  width: calc((100vw - 30px) / 3)
   height: 230px;
   display: flex;
   align-items: center;
@@ -413,7 +412,7 @@ img.logo{
 .faq {
    display: block;
     margin: 0 auto;
-    max-width: 48rem;
+    max-width: 90%;
     padding: 0px 10px;
   }
   
@@ -590,19 +589,13 @@ img.logo{
 
   }
 
-  .contact .wrapper{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
   .contactForm{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 100%;
+    max-width: 650px;
     min-height: 250px;
     margin-top: 10px;
   }
@@ -642,25 +635,6 @@ img.logo{
     border: none;
     background-color: rgb(194, 194, 194);
 }
-
-    .contactAddress{
-      width: 290px;
-      height: 100%;
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      justify-content: center;
-
-    }
-  
-    .contactAddress p{
-      color: rgba(9, 9, 9, 0.6);
-      opacity: 0.8;
-      margin-bottom: 2px;
-      font-size: 20px;
-      
-    }
 
 /*hire8*/
 .hire{
@@ -775,10 +749,9 @@ img.logo{
   width: 50px;
   height: 40px;
   position: fixed;
-  bottom: 70px;
-  right: 10px;
+  bottom: 50px;
+  right: 5px;
   z-index: 99;
-  border: none;
   outline: none;
   color: #00B140;
   border-radius: 50%;
@@ -789,7 +762,7 @@ img.logo{
 
 /*footer */
 .footer{
-    padding: 10px;
+    padding: 5px;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -804,7 +777,7 @@ img.logo{
   }
 
 .footer .follow {
-  width: 350px;
+  max-width: 350px;
   flex-direction: column;
 }
 
@@ -835,27 +808,14 @@ img.logo{
 }
 
 /*background specification*/
-
 .html{
   background-color: rgb(240, 147, 26);
   animation: html-fill 2s forwards;
 }
-
-.css{
-  background-color: dodgerblue;
-  animation: html-fill 2s forwards;
-}
-
 .javascript{
   background-color: #d3d31fe7;
   animation: html-fill 2s forwards;
 }
-
-.c{
-  background-color: #3a7fff;
-  animation: html-fill 2s forwards;
-}
-
 .react{
   background-color: #3a9fff;
   animation: html-fill 2s forwards;
@@ -897,16 +857,6 @@ img.logo{
   animation: html-fill 2s forwards;
 }
 
-.native{
-  background-color: #3a9fff;
-  animation: html-fill 2s forwards;
-}
-
-.redux{
-  background-color: rgb(121, 10, 121);
-  animation: html-fill 2s forwards;
-}
-
 .python{
   background-color: #2678c5;
   animation: python-fill 2s forwards;
@@ -924,11 +874,6 @@ img.logo{
 .nodejs{
   background-color: #0f9425;
   animation: node-fill 2s forwards;
-}
-
-.go{
-  background-color: #2890f1;
-  animation: go-fill 2s forwards;
 }
 
 .php{
@@ -950,12 +895,6 @@ img.logo{
 @keyframes node-fill {
   100% {
       width: 90%;
-  }
-}
-
-@keyframes go-fill {
-  100% {
-      width: 40%;
   }
 }
 
@@ -988,23 +927,12 @@ img.logo{
     display: flex;
   }
 
-  .contact{
-    flex-direction: column;
-  }
-
-  .contact .wrapper .contactForm{
-    width: 60%;
-  }
-
   .faq{
     overflow: auto;
   }
 }
 
 @media screen and (max-width: 768px){
-  .contact .wrapper {
-    flex-direction: column;
-  }
   #home{
     flex-direction: column-reverse;
     margin-top: 80px;
@@ -1017,13 +945,6 @@ img.logo{
 
 
 @media screen and (max-width: 640px){
-.contact .wrapper {
-  flex-direction: column;
-}
-.contact .wrapper .contactForm{
-    width: 80%;
-  }
-
   .services > div{
     flex-direction: column;
     width: 100%;
@@ -1043,19 +964,7 @@ img.logo{
 }
 
 @media screen and (max-width: 475px){
-  .contact .wrapper .contactForm{
-    width: 90%;
-  }
-
-  .contact .wrapper .contactAddress{
-    width: 90%;
-  }
-
   .hire > *{
     flex-direction: column;
   }
-}
-
-@media screen and (max-width){
-  
 }
